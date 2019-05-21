@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/town', function () {
+    return 'serach city';
+});
+
+Route::get('/town/{id}', function ($id) {
+    return 'town ' . $id;
+});
