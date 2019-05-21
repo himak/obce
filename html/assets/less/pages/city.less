@@ -1,0 +1,66 @@
+.city {
+	.header {
+		border-bottom: 1px solid #CFCECE;
+	}
+
+	.well {
+		padding: 0;
+		display: table;
+		width: 100%;
+	}
+
+	.well-default {
+		background-color: #ffffff;
+	}
+}
+
+.page-title {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	margin: 30px 0;
+	color: 464446;
+}
+
+.city-detail,
+.city-info {
+	min-height: 210px;
+	display: table-cell;
+	vertical-align: middle;
+	width: 50%;
+
+	@media (max-width: @screen-sm) {
+		display: table-row;
+		width: 100%;
+	}
+}
+
+.city-detail {
+	background-color: #F8F8F8;
+
+	table {
+		width: 100%;
+	}
+
+	table tr td {
+		width: 50%;
+		padding: 5px 0;
+	}
+
+	table tr td:first-child {
+		font-weight: bold;
+	}
+}
+
+.city-info {
+	text-align: center;
+}
+
+.city-info-data {
+	padding: 20px;
+	margin: 20px;
+}
+
+.city-name {
+	color: @color-blue;
+}

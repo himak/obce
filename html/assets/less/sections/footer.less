@@ -1,0 +1,52 @@
+@footer__text-color: #545454;
+@footer__title-color: #545454;
+
+.footer {
+
+	background-color: #DFDFDF;
+
+	ul li {
+		font-size: 14px;
+		line-height: 26px;
+		color: @footer__text-color;
+
+		&,
+		& a {
+			font-size: 14px;
+			line-height: 26px;
+			color: @footer__text-color;
+		}
+
+		& a:hover,
+		& a:hover,
+		& a:active {
+			color: @footer__text-color;
+		}
+	}
+
+	address {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	p {
+		margin-bottom: 5px;
+	}
+}
+
+.footer__title {
+	color: @footer__title-color;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 40px;
+
+	&.text-info {
+		color: @brand-info;
+	}
+}
+
+p.text-info > a  {
+	color: @brand-info;
+	text-decoration: underline;
+}
+
