@@ -12,13 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('city.index');
 });
 
-Route::get('/town', function () {
-    return 'serach city';
-});
-
-Route::get('/town/{id}', function ($id) {
-    return 'town ' . $id;
+Route::get('/city', function () {
+    return view('city.show');
 });
