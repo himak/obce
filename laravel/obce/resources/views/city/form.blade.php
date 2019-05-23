@@ -1,9 +1,3 @@
-<style type="text/css">
-	.typeahead.dropdown-menu .active a {
-		background-color: #0B84F2;
-	}
-</style>
-
 <form action="{{ route('city.search') }}" method="POST" class="col-sm-6 col-sm-offset-3" role="form">
 	@csrf
 	<div class='form-group {{ $errors->any() ? 'has-error has-feedback' : '' }}'>
