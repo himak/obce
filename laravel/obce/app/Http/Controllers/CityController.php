@@ -14,7 +14,7 @@ class CityController extends Controller
      */
     public function index()
     {
-        //
+        return view('city.index');
     }
 
     /**
@@ -46,7 +46,7 @@ class CityController extends Controller
      */
     public function show(City $city)
     {
-        //
+        return view('city.show')->with('city', $city);
     }
 
     /**
@@ -81,5 +81,35 @@ class CityController extends Controller
     public function destroy(City $city)
     {
         //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request)
+    {
+
+        $validator = \Validator::make($request->all(), [
+            'city_name' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $city = City::where('name', '=', $request->city_name )->first();
+
+        if ( $city ) {
+            return redirect('city/' . $city->id);
+        }
+
+        return redirect('/')
+            ->withErrors('City not found')
+            ->withInput();
     }
 }

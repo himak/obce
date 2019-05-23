@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'Obce')
+@section('title', 'Detail obce')
 
 @section('content')
 
@@ -46,8 +46,8 @@
 					</div>
 					<div class="city-info">
 						<div class="city-info-data">
-							<img src="assets/img/logo_city.png" alt="LOGO OBCE" class="city-image">
-							<h1 class="city-name">Nové mesto nad Váhom</h1>
+							<img src="{{ asset('assets/img/logo_city.png') }}" alt="LOGO OBCE" class="city-image">
+							<h1 class="city-name">{{ $city->name }}</h1>
 						</div>
 					</div>
 				</div>

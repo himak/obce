@@ -9,13 +9,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">
-					<img src="assets/img/logo.png" alt="LOGO">
+				<a class="navbar-brand" href="{{ url('/')}}">
+					<img src="{{ asset('assets/img/logo.png') }}" alt="LOGO">
 				</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
+
 				<form class="navbar-form navbar-right visible-xs" role="search">
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="Vyhľadaj ...">

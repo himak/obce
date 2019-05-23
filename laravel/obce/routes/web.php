@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('city.index');
-});
+Route::get('/', 'CityController@index')->name('city.index');
+Route::post('/', 'CityController@search')->name('city.search');
 
-Route::get('/city', function () {
-    return view('city.show');
-});
+Route::get('/city/{city}', 'CityController@show')->name('city.show');

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Obce - Hlavná stránka</title>
+	<title>@yield('title', 'Obce')</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 </head>
