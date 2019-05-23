@@ -10,11 +10,22 @@
 <h2 id="laravel">LARAVEL</h2>
 <p>This is Laravel app.</p>
 <ol>
-<li>Please create database, e.g. db_cities</li>
-<li>Create table Cities with command<pre><code class="lang-sh"> php artisan migrate
+<li><p>Install dependencies</p>
+<pre><code class="lang-sh"> cd laravel/obce/
+ composer install
 </code></pre>
 </li>
-<li>Import data of Cities from portal e-obce.sk<pre><code class="lang-sh"> php artisan data:migrate
+<li><p>Create file .env and generate appliaction key</p>
+<pre><code class="lang-sh"> php artisan key:generate
+</code></pre>
+</li>
+<li><p>Please create database, e.g. db_cities and config access in .env</p>
+</li>
+<li><p>Create table Cities with command</p>
+<pre><code class="lang-sh"> php artisan migrate
+</code></pre>
+</li>
+<li>Import data of Cities from portal e-obce.sk<pre><code class="lang-sh"> php artisan data:import
 </code></pre>
 </li>
 <li>Run app<pre><code class="lang-sh"> php artisan serve
