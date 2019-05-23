@@ -15,3 +15,6 @@ Route::get('/', 'CityController@index')->name('city.index');
 Route::post('/', 'CityController@search')->name('city.search');
 
 Route::get('/city/{city}', 'CityController@show')->name('city.show');
+
+Route::get('search', 'SearchController@index')->name('search');
+Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');
