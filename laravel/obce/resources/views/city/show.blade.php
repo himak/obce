@@ -14,31 +14,31 @@
 								<tbody>
 									<tr>
 										<td>Meno starostu:</td>
-										<td>Ing. Ivan Patoprstý</td>
+										<td>{{ $city->mayor }}</td>
 									</tr>
 									<tr>
 										<td>Adresa obecného úradu:</td>
-										<td>SNP 65, 900 84 Báhoň</td>
+										<td>{{ $city->address }}</td>
 									</tr>
 									<tr>
 										<td>Telefón:</td>
-										<td>0907 325 523</td>
+										<td>{{ $city->phone }}</td>
 									</tr>
 									<tr>
 										<td>Fax:</td>
-										<td>033 645 5340</td>
+										<td>{{ $city->fax }}</td>
 									</tr>
 									<tr>
 										<td>Email:</td>
-										<td>starosta@bahon.sk</td>
+										<td>{{ $city->email }}</td>
 									</tr>
 									<tr>
 										<td>Web:</td>
-										<td>www.bahon.sk</td>
+										<td>{{ $city->web }}</td>
 									</tr>
 									<tr>
 										<td>Zemepisné súradnice:</td>
-										<td>48.1523834, 17.0904241</td>
+										<td></td>
 									</tr>
 								</tbody>
 							</table>
@@ -46,7 +46,7 @@
 					</div>
 					<div class="city-info">
 						<div class="city-info-data">
-							<img src="{{ asset('assets/img/logo_city.png') }}" alt="LOGO OBCE" class="city-image">
+							<img src="{{ $city->image }}" alt="{{ $city->name }}" class="city-image">
 							<h1 class="city-name">{{ $city->name }}</h1>
 						</div>
 					</div>
