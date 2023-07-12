@@ -2,7 +2,7 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\City;
+use App\Models\City;
 use Faker\Generator as Faker;
 
 $factory->define(City::class, function (Faker $faker) {
@@ -15,6 +15,6 @@ $factory->define(City::class, function (Faker $faker) {
         'email' => $faker->email,
         'web' => $faker->domainName,
         'image' => $faker->imageUrl($width = 100, $height = 100),
-        'gps' => $faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = 50)
+        'gps' => $faker->randomFloat($nbMaxDecimals = null, $min = 0, $max = 50),
     ];
 });

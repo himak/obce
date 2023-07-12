@@ -11,8 +11,6 @@
 |
 */
 
-use Sunra\PhpSimple\HtmlDomParser;
-
 Route::get('/', 'CityController@index')->name('city.index');
 Route::post('/', 'CityController@search')->name('city.search');
 

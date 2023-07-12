@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\City;
 use Illuminate\Http\Request;
-use App\City;
 
 class SearchController extends Controller
 {
@@ -24,8 +24,8 @@ class SearchController extends Controller
      */
     public function autocomplete(Request $request)
     {
-        $data = City::select("name")
-                ->where("name","LIKE","%{$request->input('query')}%")
+        $data = City::select('name')
+                ->where('name', 'LIKE', "%{$request->input('query')}%")
                 ->get();
 
         return response()->json($data);
