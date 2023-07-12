@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
         DB::table('users')->truncate();
-        factory(App\User::class, 3)->create();
+        factory(App\Models\User::class, 3)->create();
     }
 }
 
@@ -32,6 +32,6 @@ class CitiesTableSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
         DB::table('cities')->truncate();
-        factory(App\City::class, 500)->create();
+        factory(App\Models\City::class, 500)->create();
     }
 }
